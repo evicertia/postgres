@@ -2,7 +2,7 @@ ARG VERSION=0.0
 ARG PG_MAJOR=13
 FROM postgres:$PG_MAJOR AS builder
 ENV PG_MAJOR=$PG_MAJOR
-ENV SQLITE_FDW_VERSION=v1.3.1
+ENV SQLITE_FDW_VERSION=v2.0.0
 WORKDIR /workdir
 RUN apt-get update
 RUN apt-get -y install libsqlite3-dev wget build-essential postgresql-server-dev-$PG_MAJOR
